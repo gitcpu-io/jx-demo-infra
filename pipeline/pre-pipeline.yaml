@@ -1,0 +1,30 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: jx-demo-pre-pipeline
+spec:
+  params:
+#    - name: argocd-url
+#    - name: argocd-secret
+#    - name: repo-url
+#    - name: repo-revision
+#      type: string
+#      default: "master"
+#    - name: repo-image
+#    - name: app-name
+#    - name: app-revision
+#      type: string
+#      default: "HEAD"
+  tasks:
+    - name: test
+      taskRef:
+        name: test
+      params:
+#        - name: deleteExisting
+#          value: "true"
+#        - name: url
+#          value: $(params.repo-url)
+#        - name: revision
+#          value: $(params.repo-revision)
+
+

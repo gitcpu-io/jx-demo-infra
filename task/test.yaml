@@ -1,0 +1,17 @@
+apiVersion: tekton.dev/v1beta1
+kind: Task
+metadata:
+  name: test
+spec:
+  params:
+#    - name: DIGEST
+#    - name: URL
+#    - name: COMMIT
+  steps:
+    - name: unit-test
+      image: golang:alpine
+      script: |
+        #!/usr/bin/env bash
+        set -e
+        echo "-========-"
+        go test .
