@@ -11,7 +11,8 @@ spec:
 #    - name: COMMIT
   steps:
     - name: unit-test
-      image: golang:alpine
+#      image: golang:alpine  #使用alpine时 单元测试特意报错，正常使用latest
+      image: golang:latest
       script: |
         echo "Begining to go test"
         cd $(workspaces.output.path)
