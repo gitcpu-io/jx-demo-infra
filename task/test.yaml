@@ -10,8 +10,4 @@ spec:
   steps:
     - name: unit-test
       image: golang:alpine
-      script: |
-        #!/usr/bin/env bash
-        set -e
-        echo "-========-"
-        go test .
+      command: [ "go","test","." ]
