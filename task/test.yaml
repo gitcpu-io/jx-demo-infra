@@ -3,6 +3,9 @@ kind: Task
 metadata:
   name: test
 spec:
+  workspaces:
+    - name: output
+      workspace: source-workspace
   params:
 #    - name: DIGEST
 #    - name: URL
@@ -12,5 +15,6 @@ spec:
       image: golang:alpine
       script: |
         echo "Begining to go test"
+        cd $(workspaces.output.path)
         ls -la
         go test .
