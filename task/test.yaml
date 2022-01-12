@@ -10,7 +10,7 @@ spec:
   steps:
     - name: unit-test
       image: golang:alpine
-    script: |
-      echo "Begining to go test"
-      ls -la
-      go test .
+      script: |
+        echo "Begining to go test"
+        ls -la
+        go test .
