@@ -2,7 +2,7 @@ replicaCount: 1
 image:
   repository: rubinus/jx-demo
   pullPolicy: IfNotPresent
-  tag: b462b741605b595fc0c55e64d1f874a15b37fa5b
+  tag: 335f2bb74f4c11922d98da6b7f5c3074918c502a
   oldtag: latest
 imagePullSecrets: []
 nameOverride: ""
