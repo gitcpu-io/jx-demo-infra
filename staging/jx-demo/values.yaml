@@ -1,0 +1,39 @@
+replicaCount: 1
+image:
+  repository: harbor.devopsman.io/devopsman/jx-demo
+  pullPolicy: IfNotPresent
+  tag: 2fd6184650ab139f16af1fa7077ef36c96dfebf8
+  oldtag: 5bfb3bf97650d5a9fb71a12903de9e0c50fb41a1
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8081
+ingress:
+  enabled: true
+  className: nginx
+  annotations: {}
+  hosts:
+  - host: jx-demo.devopsman.io
+    paths:
+    - path: /
+      pathType: ImplementationSpecific
+  tls: []
+resources: {}
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+nodeSelector: {}
+tolerations: []
+affinity: {}
