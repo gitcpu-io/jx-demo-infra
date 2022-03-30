@@ -37,7 +37,11 @@ spec:
             - name: COMMIT_OLD
               value: {{ .Values.image.oldtag }}
             - name: COMMIT
+<<<<<<< HEAD:prod/jx-demo/templates/deployment.yaml
               value: {{ .Values.image.tag }}
+=======
+              value: {{ .Values.image.tag }}          
+>>>>>>> 1737a4a433e2b2cbd7b385120e7de5d441789846:jx-demo/templates/deployment.yaml
           ports:
             - name: http
               containerPort: 8081
